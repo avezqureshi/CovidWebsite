@@ -1,55 +1,55 @@
 $(document).ready(function(){
 
-    $('#menu').click(function(){
-        $(this).toggleClass('fa-times');
-        $('.navbar').toggleClass('nav-toggle');
-    });
+  $('#menu').click(function(){
+      $(this).toggleClass('fa-times');
+      $('.navbar').toggleClass('nav-toggle');
+  });
 
-    $(window).on('scroll load',function(){
+  $(window).on('scroll load',function(){
 
-      $('#menu').removeClass('fa-times');
-      $('.navbar').removeClass('nav-toggle');
+    $('#menu').removeClass('fa-times');
+    $('.navbar').removeClass('nav-toggle');
 
-      if($(window).scrollTop() > 0){
-        $('.scroll-top').show();
-      }else{
-        $('.scroll-top').hide();
-      }
+    if($(window).scrollTop() > 0){
+      $('.scroll-top').show();
+    }else{
+      $('.scroll-top').hide();
+    }
 
-      // scroll spy 
+    // scroll spy 
 
-      
-    $('section').each(function(){
+    
+  $('section').each(function(){
 
-      let height = $(this).height();
-      let offset = $(this).offset().top -200;
-      let id = $(this).attr('id');
-      let top = $(window).scrollTop();
+    let height = $(this).height();
+    let offset = $(this).offset().top - 200;
+    let id = $(this).attr('id');
+    let top = $(window).scrollTop();
 
-      if(top > offset && top < offset + height){
-        $('.navbar ul li a').removeClass('active')
-        $('.navbar').find(`[href="#${id}"]`).addClass('active');
-      }
+    if(top > offset && top < offset + height){
+      $('.navbar ul li a').removeClass('active')
+      $('.navbar').find(`[href="#${id}"]`).addClass('active');
+    }
 
-    });
+  });
 
-    });
+  });
 
-    // smooth scrolling
+  // smooth scrolling
 
-    $('a[href*="#"]').on('click',function(e){
+  $('a[href*="#"]').on('click',function(e){
 
-      e.preventDefault();
+    e.preventDefault();
 
-      $('html, body').animate({
+    $('html, body').animate({
 
-        scrollTop : $($(this).attr('href')).offset().top,
+      scrollTop : $($(this).attr('href')).offset().top,
 
-      },
-      500,
-      'linear'
-      )
+    },
+    500,
+    'linear'
+    )
 
-    })
+  })
 
 });

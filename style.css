@@ -18,14 +18,19 @@
     text-transform: capitalize;
 }
 
-*
-::selection{
+.cont{
+    padding: 7rem 2rem 2rem 2rem;
+    margin: 2rem 2rem 2rem 2rem;
+
+}
+*::selection{
     background: var(--red);
     color: #fff;
 }
 
 html{
-    font-size: 61.25%;
+    font-size: 62.5%;
+    overflow-x:hidden;
 }
 
 html::-webkit-scrollbar{
@@ -68,7 +73,7 @@ section{
     position: absolute;
     top: 0; left: 0;
     height: 100%;
-    width: 100%;
+    width: 34rem;
     z-index: -1;
     background: #444;
     clip-path: polygon(0 0,100% 0, 0 0, 0% 100%);
@@ -154,17 +159,6 @@ header .navbar ul li a:hover{
     
 }
 
-video{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    z-index: -1;
-
-}
 
 .home .image{
     flex:1 1 40rem;
@@ -182,10 +176,7 @@ video{
     
 }
 .home .image img{
-    width: 100%;
-    
-    
-    
+    width: 100%;  
 }
 
 .home .content{
@@ -198,9 +189,6 @@ video{
 }
 .home .content h3 span{
     font-size: 5rem;
-}
-
-.home .content h3 span{
     color:#ffbd23;
 }
 
@@ -360,8 +348,13 @@ video{
 
 .symptoms .content{
     flex:1 1 40rem
+}
 
-
+.symptoms .content h1{
+    display: inline-block;
+}
+.symptoms .content p{
+    display: inline-block;
 }
 
 .symptoms .image{
@@ -609,7 +602,7 @@ display: block;}
     background: #fff;
     padding: 0.2rem 0.2rem 0.2rem 0.2rem;
     margin: 0.2rem 1.2rem 0.2rem 0.2rem;
-    transform: scale(0.6) rotate(360deg);
+    /* transform: scale(0.6) rotate(360deg); */
 }
 .footer .credits{
     padding: 2rem 1rem;
@@ -686,10 +679,11 @@ display: block;}
    
     #menu{
         display: block;
+        padding: 4rem;
     }
     header .navbar{
         position: fixed;
-        top:8rem; left: -120%;
+        top:2rem; left: -120%;
         height: 100%;
         width: 100%;
         background: #eee;

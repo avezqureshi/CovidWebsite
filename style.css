@@ -56,7 +56,7 @@ section{
     padding: 1rem 4rem;
     border-radius: 5rem;
     background: var(--red);
-    color: #fff;
+    color: #000;
     overflow: hidden;
     position: relative;
     z-index: 0;
@@ -75,10 +75,11 @@ section{
     transition: .3s linear;
 
 }
-
+.btn:hover{
+    color: #ffbd23;
+}
 .btn:hover::before{
     clip-path: polygon(0 0,100% 0, 100% 100%, 0% 100%);
-   
 }
 
 .heading{
@@ -107,7 +108,7 @@ header .logo{
     font-size: 2.5rem;
     color: #17161a;    
     text-transform:none;
-
+    
 }
 
 header .logo span{
@@ -150,22 +151,63 @@ header .navbar ul li a:hover{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    
+}
+
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    z-index: -1;
+
 }
 
 .home .image{
     flex:1 1 40rem;
+    transform: translateY(-1);
+    animation: animate 5s linear infinite;
 }
 
+/* ANIMATE IMAGES */
+
+@keyframes animate{
+    0%,100%
+    {transform:translateY(50px)}
+    50%
+    {transform:translateY(100px)}
+    
+}
 .home .image img{
     width: 100%;
-
     
-
+    
+    
 }
 
 .home .content{
     flex:1 1 40rem;
     
+}
+.home .content h3{
+    color: #17161a;
+    font-size: 5rem;
+}
+.home .content h3 span{
+    font-size: 5rem;
+}
+
+.home .content h3 span{
+    color:#ffbd23;
+}
+
+.home .content p{
+    color: rgba(35,34,38,.8);
+    font-size: 2rem;
+    padding: 1rem 0;
 }
 
 .protect .heading{
@@ -210,6 +252,104 @@ header .navbar ul li a:hover{
 .protect .box-container .box:hover{
     transform: translateY(-1rem);
 }
+.team .heading{
+    text-align: center;
+    padding: 1rem ;
+}
+.team .heading1{
+    text-align: center;
+    font-size: 4rem;
+    padding: 2rem 2rem 2rem 2rem;
+    margin: 2rem 2rem 2rem 2rem;
+    color: #ffbd23;
+}
+
+.team .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.team .container .box1{
+    /* background: #fff; */
+    border: 1rem solid rgba(0, 0, 0, .1);
+    padding: 2rem;
+    margin:2rem ;
+    width: 34rem;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    text-align: center;
+}
+.team .container .box1 .upper-container{
+    height: 150px;
+    background: #ffbd23;
+}
+
+.image-container {
+    background: #fff;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    padding: 5px;
+    transform: translate(86px,100px);
+}
+
+.team .container .box1 .upper-container img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;  
+}
+.team .container .box1 .lower-container{
+    height: 280px;
+    background: #000;
+    padding: 81px 5px 5px 5px;
+}
+
+.team .container .box1 img{
+    height: 17rem;
+    width: 17rem;
+}
+
+.team .container .box1 h3{
+    font-size: 2.5rem;
+    color:#fff;
+    padding:1rem 0 ;
+}
+
+.team .container .box1 p{
+    font-size: 1.5rem;
+    color: rgba(239, 234, 255, 0.8);
+    padding: 1rem 0;
+}
+
+.team .container .box1:hover{
+    transform: translateY(-1rem);
+}
+
+/* slider css */
+
+/* .owl-dots{
+    text-align: center;
+    margin-top: 40px;
+  }
+  .owl-dot{
+    height: 15px;
+    width: 45px;
+    margin: 0 5px;
+    outline: none;
+    border-radius: 14px;
+    border: 2px solid #0072bc!important;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+  }
+  .owl-dot.active,
+  .owl-dot:hover{
+    background: #0072bc!important;
+  } */
+
+/* slider css */
+
 
 .symptoms{
     display: flex;
@@ -225,7 +365,15 @@ header .navbar ul li a:hover{
 }
 
 .symptoms .image{
-    flex:1 1 40rem
+    flex:1 1 40rem;
+    animation: animate1 5s linear infinite;
+}
+@keyframes animate1{
+    0%,100%
+    {transform:translateY(30px)}
+    50%
+    {transform:translateY(20px)}
+
 }
 
 .symptoms .image img{
@@ -358,6 +506,37 @@ header .navbar ul li a:hover{
     background-size: cover;
     background-position: center;
 }
+
+.video{
+    padding: 20rem 1rem 1rem 1rem;
+    margin: 1rem 1rem 1rem 1rem;
+
+
+}
+.video .heading{
+    text-align: center;
+    padding: 1rem 1rem 1rem 1rem;
+    font-size: 4rem;
+}
+.video-hold{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 2rem 6rem 2rem;
+}
+
+.desc{
+    padding: 2rem 2rem 2rem 2rem;
+    font-size: 2.9rem;
+    text-align: center;
+    color: #000;
+    padding: 1rem 0;
+    text-transform: none;
+}
+.desc span{
+    color: #ffbd23;
+}
+
 .footer{
     min-height: auto;
     padding-top:0;
@@ -381,14 +560,19 @@ header .navbar ul li a:hover{
     font-weight: normal;
     color: #ffbd23;
 }
+
 .footer .box-container .box p{
     font-size: 1.5rem;
     color: #ccc;
     padding: 1rem 0;
+    text-transform: none;
+
 }
 .footer .box-container .box p i{
     padding-right: 1rem;
     color: var(--red);
+    text-transform: none;
+
 }
 .footer .box-container .box a{
   font-size: 1.5rem;
@@ -414,44 +598,62 @@ display: block;}
     border: 1rem solid #fff;
     margin-right: 1rem;
     padding: 0.2rem 0.2rem 0.2rem 0.2rem;
-    margin: 0.2rem 0.2rem 0.2rem 0.2rem;
+    margin: 0.2rem 1.2rem 0.2rem 0.2rem;
+    /* transform: scale(0.); */
+    transition: 0.5s;
+
 
 }
 
 .footer .box-container .box .share a:hover{
     background: #fff;
     padding: 0.2rem 0.2rem 0.2rem 0.2rem;
-    margin: 0.2rem 0.2rem 0.2rem 0.2rem;
+    margin: 0.2rem 1.2rem 0.2rem 0.2rem;
+    transform: scale(0.6) rotate(360deg);
 }
-.footer .credit{
+.footer .credits{
     padding: 2rem 1rem;
     text-align: center;
     color:#fff;
     font-weight: normal;
     font-size: 2rem;
     border-top: .1rem solid #fff3 ;
+    text-align: center;
 }
-.footer .credit a{
-    color: var(--red);
-}
-.home .content span{
-    color: var(--red);
-    font-size: 2.5rem;
+.clg{
+    padding: 2rem 1rem;
+    text-align: center;
     color:#fff;
-    padding-bottom: 2rem;
     font-weight: normal;
-}
-
-.home .content h3{
-    color: #17161a;
-    font-size: 5rem;
-}
-
-.home .content p{
-    color: rgba(35,34,38,.8);
     font-size: 2rem;
-    padding: 1rem 0;
+    border-top: .1rem solid #fff3 ;
+    text-align: center;
 }
+.clg span{
+    color:var(--red)
+}
+.footer .credits a{
+    color: var(--red);
+}
+
+.scroll-top{
+    position: fixed;
+    bottom:7.5rem; right:2rem;
+    z-index: 100;
+    display: none;
+}
+
+.scroll-top img{
+    height: 7rem;
+    animation: animate1 5s linear infinite;
+}
+
+
+
+
+
+
+
 
 
 
@@ -532,6 +734,9 @@ display: block;}
     }
     .prevent .row:last-child{
         flex-flow: column-reverse;
+    }
+    .image-container{
+        transform: translate(71px,100px);
     }
 }
 
